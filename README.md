@@ -38,6 +38,16 @@ footer
 > tsc index.ts
 > tsx -watch index.ts // watch change
 
+> Ref
+- https://alligator.io/tooling/webpack-gulp-grunt-browserify/
+
+1. https://gulpjs.com/
+
+```bash
+yarn global add gulp-cli 
+yarn add typescript gulp gulp-typescript -D 
+```
+
 ### 3.Core Datatypes
 
 1. Boolean

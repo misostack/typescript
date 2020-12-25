@@ -1,0 +1,36 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "> Application : CV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misostack/typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misostack/typescript/issues"
+  },
+  "homepage": "https://github.com/misostack/typescript#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babelify": "^10.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "browserify": "^17.0.0",
+    "tsify": "^5.0.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",    
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+  }
+}
