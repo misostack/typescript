@@ -40,6 +40,8 @@ footer
 
 > Ref
 - https://alligator.io/tooling/webpack-gulp-grunt-browserify/
+- https://stackoverflow.com/questions/19846078/how-to-read-from-chromes-console-in-javascript
+- https://coderwall.com/p/fskzdw/colorful-console-log
 
 1. https://gulpjs.com/
 
@@ -56,3 +58,9 @@ yarn add typescript gulp gulp-typescript -D
 4. Object
 5. Array
 6. Tuple
+   
+> Ref
+
+- https://www.typescripttutorial.net/typescript-tutorial/typescript-types/
+- https://github.com/typestack/class-transformer
+- https://randomuser.me/documentation#multiple
