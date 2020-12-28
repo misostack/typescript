@@ -20,11 +20,25 @@ export class Login {
   password: string;
 }
 
+// Function returning never must not have a reachable end point
+function error(message: string): never {
+  throw new Error(message);
+}
+
+// Inferred return type is never
+function fail() {
+  return error("Something failed");
+}
+
+// Function returning never must not have a reachable end point
+function infiniteLoop(): never {
+  while (true) {}
+}
 
 export class User {
   @Expose()
   @Transform((value, obj, type) => {
-    return obj.login.uuid
+    return obj.login === null || obj.login === undefined ? obj.login.uuid : (Date.now().toString() as string);
   })
   id: string;
   @Expose() cell: string;
@@ -65,5 +79,23 @@ export class User {
   @Expose()
   get fullName() :string {
     return `${this.firstName} ${this.lastName}`
+  }
+  @Expose()
+  get age(): number {
+    return <number>(new Date().getFullYear() - this.dob.getFullYear());
+  }
+
+  sortAge(user: User): number {
+    return this.age - user.age;
+  }
+
+  toString() : HTMLElement {
+    const ele = document.createElement('tr');
+    ele.innerHTML = `
+      <th>${this.id}</th>
+      <td>${this.fullName}</td>
+      <td>${this.age}</td>
+    `
+    return ele;
   }
 }

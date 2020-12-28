@@ -58,7 +58,11 @@ yarn add typescript gulp gulp-typescript -D
 4. Object
 5. Array
 6. Tuple
-   
+
+> About Number, String, Boolean, Symbol and Object
+
+> It can be tempting to think that the types Number, String, Boolean, Symbol, or Object are the same as the lowercase versions recommended above. These types do not refer to the language primitives however, and almost never should be used as a type.
+
 > Ref
 
 - https://www.typescripttutorial.net/typescript-tutorial/typescript-types/
