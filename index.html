@@ -14,6 +14,24 @@
           white-space: -o-pre-wrap;    /* Opera 7 */
           word-wrap: break-word;       /* Internet Explorer 5.5+ */
       }
+      #chess{
+        margin: 40px 0;
+      }
+      #chess tr td {
+        border: 1px solid black;
+        width: 64px;
+        height: 64px;
+        cursor: pointer;
+      }
+      #chess .cell-green{
+        background-color: rgb(1, 128, 1);
+      }
+      #chess .cell-yellow{
+        background-color: rgb(243, 243, 125);
+      }
+      #chess .selected{
+        background-color: blue;
+      }
     </style>
   </head>
   <body class="has-navbar-fixed-bottom">
@@ -22,7 +40,7 @@
         <h6 class="title">Chess</h6>        
       </div>
       <div class="columns">
-        <div id="chess"></div>
+        <table id="chess"></table>
       </div>
     </section>
     <section class="section">          

@@ -5,6 +5,7 @@ import CV from './cv';
 import Numbers from './numbers';
 import DataTypes from './datatypes';
 import Functions from './functions';
+import Chess from './chess';
 const log = (text: string) : void => {
   const styles = 'color: green; font-weight:bold; font-size: 1.2rem;'
   console.log(`%c ${text} :`, styles);
@@ -32,6 +33,7 @@ function hello(compiler: string) {
   console.log(Functions.sum(1,2));
   console.log(Functions.sum(1,2,3));
   console.log(Functions.total(1,2,3,4,5,6,7,8,9,10));  
-  
+  log('Chess');
+  Chess.render();
 }
 hello("TypeScript");
