@@ -68,3 +68,4 @@ yarn add typescript gulp gulp-typescript -D
 - https://www.typescripttutorial.net/typescript-tutorial/typescript-types/
 - https://github.com/typestack/class-transformer
 - https://randomuser.me/documentation#multiple
+- https://stackoverflow.com/questions/49699067/property-has-no-initializer-and-is-not-definitely-assigned-in-the-construc

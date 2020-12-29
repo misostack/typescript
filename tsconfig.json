@@ -4,7 +4,12 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "target": "es5",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    // this enables stricter inference for data properties on `this`
+    "strict": true,
+    // if using webpack 2+ or rollup, to leverage tree shaking:
+    "module": "es2015",
+    "moduleResolution": "node"    
   },
   "exclude": ["node_modules"]
 }

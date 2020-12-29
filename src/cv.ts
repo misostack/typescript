@@ -1,6 +1,6 @@
 class CV {
   
-  private _fullname : string;
+  private _fullname!: string;
   public get fullname() : string {
     return this._fullname;
   }
