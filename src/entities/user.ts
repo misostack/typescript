@@ -6,18 +6,18 @@ export enum  GENDER {
   OTHERS = 'others'
 }
 export class Location {
-  city: string;
-  country: string;  
-  coordinates: {latitude: number, longitude: number};
-  postcode: number;
-  state: string;
-  street: string;
-  timezone: {offset: string, description: string}
+  city!: string;
+  country!: string;  
+  coordinates!: { latitude: number; longitude: number; };
+  postcode!: number;
+  state!: string;
+  street!: string;
+  timezone!: { offset: string; description: string; };
 }
 export class Login {
-  username: string;
-  uuid: string;
-  password: string;
+  username!: string;
+  uuid!: string;
+  password!: string;
 }
 
 // Function returning never must not have a reachable end point
@@ -40,41 +40,48 @@ export class User {
   @Transform((value, obj, type) => {
     return obj.login === null || obj.login === undefined ? obj.login.uuid : (Date.now().toString() as string);
   })
-  id: string;
-  @Expose() cell: string;
-  @Expose() phone: string;
-  @Expose() 
-  @Transform((value: {date: Date, age: number}) => {
+  id!: string;
+  @Expose()
+  cell!: string;
+  @Expose()
+  phone!: string;
+  @Expose()
+  @Transform((value: { date: Date; age: number; }) => {
     return new Date(value.date);
   })
-  dob: Date;
-  @Expose() email: string;
-  @Expose() gender: GENDER;
+  dob!: Date;
+  @Expose()
+  email!: string;
+  @Expose()
+  gender!: GENDER;
   @Expose()
   @Type(() => String)
-  @Transform((_value,obj,_type) => {
+  @Transform((_value, obj, _type) => {
     return obj.name.first;
   })
-  firstName: string;
+  firstName!: string;
   @Expose()
   @Type(() => String)
-  @Transform((_value,obj,_type) => {
+  @Transform((_value, obj, _type) => {
     return obj.name.last;
   })
-  lastName: string;  
-  @Expose() picture: {
-    large: string,
-    medium: string,
-    thumbnail: string,
+  lastName!: string;  
+  @Expose()
+  picture!: {
+    large: string;
+    medium: string;
+    thumbnail: string;
   };
-  @Expose() 
-  @Transform((value: {date: Date, age: number}) => {
+  @Expose()
+  @Transform((value: { date: Date; age: number; }) => {
     console.error('registered', value);
     return new Date(value.date);
-  }, {toClassOnly: true})
-  registered: Date;
-  @Expose() location: Location;
-  @Expose() login: Login;
+  }, { toClassOnly: true })
+  registered!: Date;
+  @Expose()
+  location!: Location;
+  @Expose()
+  login!: Login;
 
   @Expose()
   get fullName() :string {
